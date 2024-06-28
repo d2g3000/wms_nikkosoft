@@ -1,0 +1,94 @@
+﻿@using WMS_Nikkosoft.Data.ViewModels;
+@model RegisterVM;
+
+@{
+    ViewData["Title"] = "Registro de una nueva cuenta";
+}
+
+<div class="container-fluid" style="max-width:480px;">
+    <div class="text-center">
+        <p>
+            <h4>Registrar vendedor</h4>
+        </p>
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="col-md-12 alert alert-danger">
+                <span><b>Disculpe!</b> - @TempData["Error"] </span>
+            </div>
+        }
+
+        <div class="row">
+            <div>
+                <form asp-action="Register">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="FullName" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="FullName" class="control-label"></label>
+
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="UserName" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="UserName" class="control-label"></label>
+
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="EmailAddress" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="EmailAddress" class="control-label"></label>
+
+                        <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="ConfirmEmail" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="ConfirmEmail" class="control-label"></label>
+
+                        <span asp-validation-for="ConfirmEmail" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Password" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="Password" class="control-label"></label>
+
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="ConfirmPassword" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="ConfirmPassword" class="control-label"></label>
+
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="cedula" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="cedula" class="control-label"></label>
+
+                        <span asp-validation-for="cedula" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="rif" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="rif" class="control-label"></label>
+
+                        <span asp-validation-for="rif" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="phoneNumber" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="phoneNumber" class="control-label"></label>
+
+                        <span asp-validation-for="phoneNumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="CodigoVendedor" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="CodigoVendedor" class="control-label"></label>
+
+                        <span asp-validation-for="CodigoVendedor" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-outline-success float-right" type="submit" value="Registrar" />
+                        <a class="btn btn-outline-secondary" asp-controller="Home" asp-action="Index">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+﻿@using WMS_Nikkosoft.Data.ViewModels;
+@model LoginVM;
+
+@{
+    ViewData["Title"] = "Ingresa a tu cuenta";
+}
+<style>
+
+    .abs-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form {
+        width: 450px;
+    }
+
+</style>
+
+
+@if (TempData["Error"] != null)
+{
+    <div class="w3-amber">
+        <span><b>Lo siento!</b> - @TempData["Error"] </span>
+    </div>
+}
+
+<div class="container">
+
+
+
+    <div class="text-center">
+        <img src="~/img/wms.png" width="200" />
+    </div>
+
+    <div class="abs-center">
+        <form asp-action="Login" class="border p-3 form " style="border-radius:25px;background-color:#746ab0;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-floating mb-3">
+
+
+                <input asp-for="UserName" class="form-control rounded-pill" id="floatingInput" placeholder="Usuario" />
+                <label asp-for="UserName" class="control-label"></label>
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+
+                <input asp-for="Password" class="form-control rounded-pill" id="floatingPassword" placeholder="Password" />
+                <label asp-for="Password" class="control-label"></label>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="text-center">
+                <a class="btn btn-danger mt-2 rounded-pill" asp-controller="Home" asp-action="Index">Cancelar</a>
+                <input class="btn btn-success mt-2 rounded-pill" type="submit" value="Ingresar" />
+
+            </div>
+        </form>
+
+    </div>
+    <div class="text-center">
+        <img src="~/img/nikkoappsblanco.png" width="150" />
+    </div>
+
+</div>

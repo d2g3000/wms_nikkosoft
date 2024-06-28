@@ -1,0 +1,103 @@
+﻿@model Ubicacion
+
+<style>
+    .redondeo{
+        border-radius:25px;
+    }
+
+</style>
+@if (TempData["Error"] != null)
+{
+    <div class="col-md-12 alert alert-danger">
+        <span><b>Disculpe!</b> - @TempData["Error"] </span>
+    </div>
+}
+
+<form asp-action="Agregar" class="border p-3 form border redondeo" style="max-width:480px;background-color:lightgray">
+    
+    <div asp-validation-summary="ModelOnly" class="w3-amber"></div>
+    <div class="form-group ">
+            <label asp-for="co_ubicacion" ></label>
+
+        <input asp-for="co_ubicacion" required oninvalid="this.setCustomValidity('Por favor rellene el campo')" class="form-control" min="1" max="6" onkeypress="return (event.charCode!=32)" />
+        <span asp-validation-for="co_ubicacion" class="text-warning"></span>
+    
+    </div>
+    <div class="form-group ">
+        <label asp-for="des_ubicacion "></label>
+        <input asp-for="des_ubicacion" class="form-control" required min="1" />
+        <span asp-validation-for="des_ubicacion" ></span>
+    </div>
+
+    <div class="form-group ">
+        <label asp-for="capacidad"></label>
+        <input asp-for="capacidad" class="form-control" required min="1" type="number"/>
+        <span asp-validation-for="capacidad" class="w3-amber"></span>
+    </div>
+
+    <div class="form-group ">
+        <label asp-for="alto"></label>
+        <input asp-for="alto" class="form-control" required min="1" type="number" />
+        <span asp-validation-for="alto" class="w3-amber"></span>
+    </div>
+
+    <div class="form-group ">
+        <label asp-for="largo"></label>
+        <input asp-for="largo" class="form-control" required min="1" type="number" />
+        <span asp-validation-for="largo" class="w3-amber"></span>
+    </div>
+    <div class="form-group ">
+        <label asp-for="ancho"></label>
+        <input asp-for="ancho" class="form-control" required min="1" type="number" />
+        <span asp-validation-for="ancho" class="w3-amber"></span>
+    </div>
+   
+    <div class="form-group ">
+        <label asp-for="activo"></label>
+        <input asp-for="activo" type="checkbox" />
+        <span asp-validation-for="activo" class="w3-amber"></span>
+    </div>
+
+    <div class="form-group ">
+        <label asp-for="co_alma"></label>
+        <select asp-for="co_alma" class="w3-dropdown-hover w3-input" asp-items="ViewBag.almacen"></select>
+       
+        <span asp-validation-for="co_alma" class="w3-amber"></span>
+    </div>
+    <br />
+    <div class="form-group text-center">
+        <input type="submit" value="Registrar" class="btn btn-success" style="margin-top:5px;margin-bottom:5px;" />
+
+    </div>
+ 
+</form>
+
+
+
+        @section scripts{
+    <script>
+        //onkeyup="valid(this,'special')"
+        //sin permiitr espacios
+        var r = { 'special': /[\W]/g }
+        //con espacios
+        var s = { 'special': /[^\w^ñ^(á|é|í|ó|ú)^\s^]/g }
+
+        function valid(o, w) {
+            o.value = o.value.replace(r[w], '');
+        }
+        function validaremos(o, w) {
+            o.value = o.value.replace(s[w], '');
+        }
+        const co_ubicacion = document.getElementById("co_ubicacion");
+
+        co_ubicacion.addEventListener("input", function (event) {
+            if (co_ubicacion.validity.typeMismatch) {
+                co_ubicacion.setCustomValidity(
+                    "¡Se esperaba un código de ubicación!",
+                );
+            } else {
+                co_ubicacion.setCustomValidity("");
+            }
+        });
+            </script>
+        }

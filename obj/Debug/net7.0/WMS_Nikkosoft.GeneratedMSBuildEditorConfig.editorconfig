@@ -1,0 +1,139 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WMS_Nikkosoft
+build_property.RootNamespace = WMS_Nikkosoft
+build_property.ProjectDir = C:\Users\Nikkosoft\source\repos\WMS_Nikkosoft\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Nikkosoft\source\repos\WMS_Nikkosoft
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Account/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Account/RegisterCompleted.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RlckNvbXBsZXRlZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Account/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Articulos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Articulos/Ubicaciones.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWN1bG9zXFViaWNhY2lvbmVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Clientes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Dashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Entregas/Consultar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50cmVnYXNcQ29uc3VsdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Entregas/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW50cmVnYXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Proveedores/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvdmVlZG9yZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Recepciones/Consultar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uZXNcQ29uc3VsdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Recepciones/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Recepciones/Ubicar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXBjaW9uZXNcVWJpY2FyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Reportes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Shared/NotFound.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXE5vdEZvdW5kLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Ubicacion/Agregar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWJpY2FjaW9uXEFncmVnYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Ubicacion/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWJpY2FjaW9uXEVkaXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Ubicacion/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWJpY2FjaW9uXEVsaW1pbmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Ubicacion/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWJpY2FjaW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Ubicacion/Ubicacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWJpY2FjaW9uXFViaWNhY2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nikkosoft/source/repos/WMS_Nikkosoft/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-dwdcafaun4

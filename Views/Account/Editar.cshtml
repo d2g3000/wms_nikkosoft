@@ -1,0 +1,89 @@
+﻿@model ApplicationUser
+
+@{
+    ViewData["Title"] = "Actualizar Usuario";
+}
+
+<div class="container-fluid" style="max-width:480px;">
+    <div class="text-center">
+        @if (TempData["Success"] != null)
+        {
+            <p class="alert alert-success" id="successMessage">@TempData["Success"]</p>
+        }
+        <p>
+            <h1>Editar usuario</h1>
+        </p>
+
+
+        <div>
+            <div>
+                <form asp-action="Editar">
+                    <div asp-validation-summary="ModelOnly" class="w3-amber"></div>
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="Id" class="form-control" id="floatingInput" placeholder="Usuario" readonly />
+                        <label asp-for="Id"></label>
+
+                        <span asp-validation-for="Id" class="w3-text-amber"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="FullName" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="FullName"></label>
+
+                        <span asp-validation-for="FullName" class="w3-amber"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="UserName" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="UserName"></label>
+
+                        <span asp-validation-for="UserName" class="w3-amber"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Email" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="Email"></label>
+
+                        <span asp-validation-for="Email" class="w3-amber"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="PhoneNumber" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="PhoneNumber"></label>
+
+                        <span asp-validation-for="PhoneNumber" class="w3-amber"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="cedula" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="cedula"></label>
+
+                        <span asp-validation-for="cedula" class="w3-amber"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="direccion" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="direccion"></label>
+
+                        <span asp-validation-for="direccion" class="w3-amber"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="rif" class="form-control" id="floatingInput" placeholder="Usuario" />
+                        <label asp-for="rif"></label>
+
+                        <span asp-validation-for="rif" class="w3-amber"></span>
+                    </div>
+
+
+                    <br />
+                    <div class="w3-container">
+                        <input type="submit" value="Actualizar" class="w3-border w3-round-xxlarge w3-button" />
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div style="position: fixed; right: 5px; bottom: 25px;" class="text-white">
+    <a asp-controller="Account" asp-action="Users" class="w3-border w3-button w3-round-xxlarge">
+        <i class="fas fa-reply"></i> Volver
+    </a>
+</div>

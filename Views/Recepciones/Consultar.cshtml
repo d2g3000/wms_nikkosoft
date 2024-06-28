@@ -1,0 +1,298 @@
+﻿@using WMS_Nikkosoft.Data.ViewModels
+@model IEnumerable<RecepcionVM>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["MyData"] = Model;
+    ViewData["Title"] = "renglones recepción";
+}
+
+
+<div>
+    <div class="preloader" id="loader" style="visibility:hidden;">
+        <div class="box">
+            <div class="box__inner">
+                <div class="box__back-flap"></div>
+                <div class="box__right-flap"></div>
+                <div class="box__front-flap"></div>
+                <div class="box__left-flap"></div>
+                <div class="box__front"></div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box__inner">
+                <div class="box__back-flap"></div>
+                <div class="box__right-flap"></div>
+                <div class="box__front-flap"></div>
+                <div class="box__left-flap"></div>
+                <div class="box__front"></div>
+            </div>
+        </div>
+        <div class="line">
+            <div class="line__inner"></div>
+        </div>
+        <div class="line">
+            <div class="line__inner"></div>
+        </div>
+        <div class="line">
+            <div class="line__inner"></div>
+        </div>
+        <div class="line">
+            <div class="line__inner"></div>
+        </div>
+        <div class="line">
+            <div class="line__inner"></div>
+        </div>
+        <div class="line">
+            <div class="line__inner"></div>
+        </div>
+        <div class="line">
+            <div class="line__inner"></div>
+        </div>
+    </div>
+    <div id="bloqueador-factura-compra"></div>
+    <h4 class="w3-center">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M240-80q-50 0-85-35t-35-85v-120h120v-560l60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60 60 60 60-60v680q0 50-35 85t-85 35H240Zm480-80q17 0 28.5-11.5T760-200v-560H320v440h360v120q0 17 11.5 28.5T720-160ZM360-600v-80h240v80H360Zm0 120v-80h240v80H360Zm320-120q-17 0-28.5-11.5T640-640q0-17 11.5-28.5T680-680q17 0 28.5 11.5T720-640q0 17-11.5 28.5T680-600Zm0 120q-17 0-28.5-11.5T640-520q0-17 11.5-28.5T680-560q17 0 28.5 11.5T720-520q0 17-11.5 28.5T680-480ZM240-160h360v-80H200v40q0 17 11.5 28.5T240-160Zm-40 0v-80 80Z" /></svg>
+
+        Factura Compra nro: @ViewData["doc_num"] </h4>
+    <a class="btn btn-light float-end" asp-area="" asp-controller="Recepciones" asp-action="Index" >
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z" /></svg>
+        Volver</a>
+
+    <button class="btn btn-light" id="btnUbicar">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-40v-880h80v80h560v-80h80v880h-80v-80H200v80h-80Zm80-480h80v-160h240v160h240v-240H200v240Zm0 320h240v-160h240v160h80v-240H200v240Zm160-320h80v-80h-80v80Zm160 320h80v-80h-80v80ZM360-520h80-80Zm160 320h80-80Z" /></svg>
+        Ubicar</button>
+
+    
+    <div class="pb-5" id="view-ubicar-global" style="margin-top:5px;">
+        <table class="table table-striped p-4 overflow-scroll tabla-redonda" style="background-color:lightgray;">
+            <thead class="text-white" style="background-color:#746ab0;">
+                <tr>
+                    <th class="header-redondo">
+                        Reng
+                    </th>
+                    <th>
+
+                        <a asp-action="Consultar" asp-route-sortOrder="@ViewData["DateSortParm"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" class="text-white">Artículo</a>
+                    </th>
+                    <th class="">
+
+                        Documento
+
+
+                    </th>
+                    <th>
+                        Cantidad
+                    </th>
+                    <th>
+                        Estatus
+                    </th>
+                    <th class="header-redondo-b">
+                        Ubicar
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @item.reng_num
+                        </td>
+                        <td>
+                            <a class="link-primary" asp-action="Ubicar" asp-route-id="@item.rowguid">@item.co_art</a>
+                        </td>
+                        <td>
+                            @item.doc_num
+                        </td>
+                        <td>
+                            @item.total_art
+                        </td>
+                        <td>
+                            @item.estatus
+                        </td>
+                        <td>
+                              <a class="btn btn-light" asp-action="Ubicar" asp-route-id="@item.rowguid">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-40v-880h80v80h560v-80h80v880h-80v-80H200v80h-80Zm80-480h80v-160h240v160h240v-240H200v240Zm0 320h240v-160h240v160h80v-240H200v240Zm160-320h80v-80h-80v80Zm160 320h80v-80h-80v80ZM360-520h80-80Zm160 320h80-80Z" /></svg>
+                                  Ubicar</a>
+                        </td>
+                      
+                    </tr>
+                }
+
+
+
+            </tbody>
+
+        </table>
+
+        <div class="pagination text-white" style="background-color:#746ab0;">
+
+        </div>
+    </div>
+</div>
+
+<input type="hidden" id="my-data" value="@ViewBag.MyData" />
+
+@section scripts {
+    <script>
+        const btnUbicar = document.getElementById("btnUbicar");
+        btnUbicar.addEventListener("click", AlertaUbicarRenlognes)
+        const myData = {
+            docnum: @Html.Raw(Json.Serialize(ViewData["doc_num"])) ,
+            RenglonesCompra: @Html.Raw(Json.Serialize(ViewData["MyData"]))
+        
+        
+        };
+        //@Html.Raw(Json.Serialize(ViewData["doc_num"]))
+
+    // Output: "Ziggy, Rafiq Blog Post"
+  
+        async function ubicarGlobal() {
+            const loader = document.getElementById("loader");
+            const bloqueador = document.getElementById("bloqueador-factura-compra");
+           loader.style.visibility= "visible";
+            bloqueador.classList.add("cover"); 
+            // nombredeproducto.innerText = "";
+            const fcreng = JSON.stringify(myData);
+            console.log(myData)
+           
+            await fetch(`/UbicarFacturaCompra`,
+                {
+                    method: 'POST',
+
+                    headers: {
+
+
+                        'Content-Type': 'application/json;charse=UTF-8'
+                    },
+                    body: fcreng,
+                })
+                .then((response) => {
+                    return response.ok ? response.json() : Promise.reject(response);
+                })
+                .then((data) => {
+                    const respuesta = data.data;
+                    console.log(`esta es la data ${JSON.stringify(data)}`)
+                    if(respuesta == 'logrado') {
+                        
+                        loader.style.visibility = "hidden";
+                        bloqueador.classList.remove("cover");
+                        console.log(`esto recibe ${data.id}`)
+                        refresh(data.id)
+                    }
+                })
+        }
+       
+        async function refresh(x) {
+           
+          
+           /* await fetch(`/Recepciones/Consultar?Id=${x}`)
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error('Unable to get items.', error));*/
+            $('#view-ubicar-global').load('view-ubicar-global')
+
+        }
+        UbicarFacturaCompra = form => {
+        if (Swal.fire({
+        title: '¿Está usted seguro de realizar esta operación?',
+        text: "¡No podra revertir esta operación!",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, Borrar!'
+        }).then((result) => {
+        if (result.isConfirmed) {
+
+        try {
+        $.ajax({
+        type: 'POST',
+        url: form.action,
+        data: new FormData(form),
+        contentType: false,
+        processData: false,
+        success: function (res) {
+        $('#view-all').html(res.FormData);
+        },
+        error: function (err) {
+        console.log(err)
+        }
+        }).done(function (msg) {
+        if (msg.status === 'Borrado') {
+        $('#view-all').load(' #view-all')
+
+        Swal.fire(
+        'Borrado!',
+        'Ha sido borrado.',
+        'success'
+        )
+        }
+        else if (msg.status === 'EnUso') {
+        Swal.fire(
+        'Error!',
+        'No puede ser borrado porque esta en uso.',
+        'error'
+        )
+        $('#view-all').load(' #view-all')
+        } else if (msg.status === 'EnUsoReng') {
+        Swal.fire(
+        'Error!',
+        'Elimine los detalles del caso y vuelva a intentar',
+        'error'
+        )
+        $('#view-all').load(' #view-all')
+        }
+
+        });
+        } catch (ex) {
+        console.log(ex)
+        }
+
+
+
+
+
+        }
+        }))
+
+
+
+        //prevent default form submit event
+        return false;
+        }
+
+        /*
+
+         <form asp-action="UbicarFacturaCompra" class="d-inline" asp-route-id="@ViewData["doc_rowguid"]">
+        <input type="hidden" asp-for="@ViewData["doc_rowguid"]" />
+       
+        <input type="submit" value="Ubicar" class="btn btn-light" />
+    </form>
+
+    */
+        async function AlertaUbicarRenlognes() {
+            Swal.fire({
+                title: "Realizar ubicaciones",
+                text: "¿Está usted seguro de realizar esta operación?, el proceso puede tardar varios minutos, no cierre o actualice la página.",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: "Sí, proceder",
+                cancelButtonText: "Cancelar",
+            })
+                .then(resultado => {
+                    if (resultado.value) {
+                        // Hicieron click en "Sí"
+                        ubicarGlobal();
+                    } else {
+                        // Dijeron que no
+                        console.log("*Se canceló la operación");
+                    }
+                });
+        }
+  
+    </script>
+}
